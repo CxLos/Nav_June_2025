@@ -72,8 +72,8 @@ df["Date of Activity"] = pd.to_datetime(df["Date of Activity"], errors='coerce')
 df = df[df['Date of Activity'].dt.month == 5]
 
 # Get the reporting month:
-current_month = datetime(2025, 5, 1).strftime("%B")
-report_year = datetime(2025, 5, 1).year
+current_month = datetime(2025, 6, 1).strftime("%B")
+report_year = datetime(2025, 6, 1).year
 
 # Strip whitespace
 df.columns = df.columns.str.strip()
