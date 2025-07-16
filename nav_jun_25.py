@@ -69,7 +69,7 @@ df.columns = df.columns.str.strip()
 
 # Filtered df where 'Date of Activity:' is in May
 df["Date of Activity"] = pd.to_datetime(df["Date of Activity"], errors='coerce')
-df = df[df['Date of Activity'].dt.month == 5]
+df = df[df['Date of Activity'].dt.month == 6]
 
 # Get the reporting month:
 current_month = datetime(2025, 6, 1).strftime("%B")
@@ -828,7 +828,7 @@ location_pie=px.pie(
         color='black'
     )
 ).update_traces(
-    rotation=45,
+    rotation=90,
     # textinfo='percent',
     texttemplate='%{value}<br>(%{percent:.2%})',
     hovertemplate='<b>%{label}</b>: %{value}<extra></extra>'
@@ -1897,20 +1897,20 @@ html.Div(
     ]
 ),
 
-# ROW 9
-html.Div(
-    className='row4',
-    children=[
-        html.Div(
-            className='graph5',
-            children=[
-                dcc.Graph(
-                    figure=zip_pie
-                )
-            ]
-        )
-    ]
-),
+# # ROW 9
+# html.Div(
+#     className='row4',
+#     children=[
+#         html.Div(
+#             className='graph5',
+#             children=[
+#                 dcc.Graph(
+#                     figure=zip_pie
+#                 )
+#             ]
+#         )
+#     ]
+# ),
 
 # # ROW 8
 html.Div(
